@@ -20,8 +20,13 @@
       [rounded]="true"
       (onClick)="openDialog()"
     ></p-button>
-    
-    <button #noBtn (mouseover)="moveButton()" class="no-btn">
+
+    <button
+      #noBtn
+      (mouseover)="moveButton()"
+      (touchstart)="moveButton($event)"
+      class="no-btn"
+    >
       {{ pageData().buttons.no }}
     </button>
   </div>
@@ -32,7 +37,6 @@
     [modal]="true"
     [draggable]="false"
     styleClass="romantic-dialog"
-    [style]="{ width: '50vw' }"
   >
     <div *ngIf="step() === 1" class="letter">
       <h2 class="bright-text">{{ pageData().dialog.header }}</h2>
@@ -52,10 +56,12 @@
           allow="autoplay; encrypted-media"
           allowfullscreen
         ></iframe>
-        <video 
+        <video
           *ngIf="pageData().videoConfig.type === 'mp4'"
           [src]="pageData().videoConfig.src"
-          controls autoplay class="w-full"
+          controls
+          autoplay
+          class="w-full"
         ></video>
       </div>
       <div class="video-footer-text">

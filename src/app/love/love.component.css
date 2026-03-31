@@ -1,217 +1,17 @@
-.romantic-page {
-  min-height: 100vh; /* height အစား min-height သုံးတာ ဖုန်းအတွက် ပိုကောင်းပါတယ် */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
-  overflow-x: hidden;
-  position: relative;
-  padding: 20px;
-}
-
-.title {
-  font-size: clamp(2rem, 8vw, 3.5rem); /* ဖုန်းမှာ အရွယ်အစား အလိုအလျောက် ပြောင်းပါမယ် */
-  color: #ff0055; /* ပိုလင်းတဲ့ ပန်းရောင် */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: 800;
-}
-
-.notes {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.note-card {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #333; /* စာသားကို ပိုထင်ရှားစေဖို့ */
-}
-
-/* စာသားတွေကို ပိုလင်းပြီး ထင်ရှားစေတဲ့ Class */
-.typewriter-text, .letter h2, .video-box h2 {
-  color: #d81b60;
-  font-weight: bold;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .notes {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .note-card {
-    width: 85%;
-    height: auto;
-    min-height: 120px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    align-items: center;
-  }
-
-  .no-btn {
-    position: static !important; /* ဖုန်းမှာ No button ကို လိုက်ဖမ်းရခက်မှာစိုးလို့ ပုံသေထားတာ ပိုကောင်းပါတယ် */
-  }
-}
-
-/* PrimeNG Dialog Customization */
-::ng-deep .romantic-dialog .p-dialog-header {
-  background: #fff0f5;
-  border-bottom: none;
-  padding-top: 15px;
-}
-
-::ng-deep .romantic-dialog .p-dialog-content {
-  background: #fff0f5;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-
-/* စာသားအရောင်ကို ပိုလင်းစေရန် */
-.bright-text {
-  color: #ff1493 !important; /* Deep Pink အရောင် */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-
-
-.surprise-btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #e91e63, #c2185b);
-}
-
-/* Video Box အတွင်းက စာသားများကို အလယ်ပို့ခြင်း */
-.video-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* အလျားလိုက် အလယ်ပို့ */
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-}
-
-.video-footer-text {
-  margin-top: 20px;
-  width: 100%;
-}
-
-.video-footer-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.video-footer-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Video Container Responsive ဖြစ်စေရန် */
-.video-container {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.video-container iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
-
-/* ... keep your previous CSS ... */
-
-.heart-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1; /* Above background, below buttons */
-  overflow: hidden;
-}
-
-.heart-element {
-  position: absolute;
-  bottom: -50px;
-  user-select: none;
-  opacity: 0.8;
-  animation: floatUp linear forwards;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(0.8) rotate(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-110vh) scale(1.2) rotate(20deg);
-    opacity: 0;
-  }
-}
-
-.notes, .buttons, .title {
-  position: relative;
-  z-index: 10; /* Make sure buttons stay clickable above hearts */
-}
-
+/* --- Main Layout Setup --- */
 .romantic-page {
   min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7e2 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: 'Pyidaungsu', sans-serif;
   position: relative;
-  padding: 20px;
 }
 
-/* Crucial: Heart container must be full screen and behind content */
+/* Floating Hearts Layer */
 .heart-container {
   position: fixed;
   top: 0;
@@ -219,37 +19,147 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1; 
+  z-index: 1;
 }
 
-.title, .notes, .buttons {
-  position: relative;
-  z-index: 10; /* Content stays above hearts */
-}
-
-/* Rest of your styling... */
-.note-card {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Titles and Typography */
+.title {
+  color: #d53f8c; /* Deep Pink */
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
+  z-index: 2;
   font-weight: bold;
 }
 
+/* --- Notes Section (Responsive) --- */
+.notes {
+  display: flex;
+  flex-direction: column; /* Mobile မှာ တစ်ခုချင်းစီ အပေါ်အောက်စီမယ် */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px; /* Desktop အကျယ်အတွက် */
+  padding: 0 15px;
+  z-index: 2;
+  box-sizing: border-box;
+}
 
+.note-card {
+  width: 100%; /* Mobile မှာ Screen အပြည့်နီးပါး */
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(213, 63, 140, 0.15);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+
+.note-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #9b2c60; /* Darker Pink for Readability */
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* --- Buttons Section --- */
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap; /* ဖုန်းမှာ ခလုတ်တွေ ဆံ့အောင် */
+  gap: 20px;
+  z-index: 10;
+  justify-content: center;
+  width: 100%;
+}
+
+/* No Button Styling */
+.no-btn {
+  background-color: #cbd5e0;
+  color: #4a5568;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+/* --- Dialog & Video Content --- */
+::ng-deep .romantic-dialog {
+  width: 90vw !important; /* Mobile မှာ ကျယ်ကျယ်ပြန့်ပြန့် */
+  max-width: 500px;
+  border-radius: 24px;
+}
+
+.bright-text {
+  color: #d53f8c; /* Pink color */
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.typewriter-text {
+  min-height: 1.5em;
+  font-size: 1.1rem;
+  color: #ed64a6; /* Lighter Pink */
+}
 
 .surprise-btn {
-  background: linear-gradient(45deg, #ff4081, #e91e63);
+  background: #f687b3; /* Pink Button */
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border-radius: 50px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(246, 135, 179, 0.4);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #000;
+}
+
+.video-container iframe, 
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Desktop Layout Enhancements --- */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .notes {
+    flex-direction: row; /* Desktop မှာ ဘေးတိုက်စီမယ် */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .note-card {
+    width: calc(33.33% - 20px); /* Card ၃ ခုဆိုရင် တစ်တန်းတည်း */
+    min-width: 280px;
+  }
+
+  ::ng-deep .romantic-dialog {
+    width: 40vw !important; /* Desktop မှာ အရွယ်အစား အမှန် ပြန်ဖြစ်စေဖို့ */
+  }
 }

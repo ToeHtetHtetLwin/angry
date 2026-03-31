@@ -13,7 +13,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-// PrimeNG & GSAP
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import gsap from 'gsap';
@@ -54,7 +53,7 @@ export class LoveComponent implements OnInit {
         this.updateVideoUrl(data.videoConfig.src, false);
         setTimeout(() => {
           this.playEntranceAnimation();
-          this.startGsapHearts(); // Launching GSAP version
+          this.startGsapHearts(); 
         }, 500);
       } else if (this.allCustomers().length > 0) {
         this.router.navigate(['/not-found']);
@@ -73,7 +72,6 @@ export class LoveComponent implements OnInit {
     });
   }
 
-  // --- Logic & Video ---
   private updateVideoUrl(url: string, autoplay: boolean) {
     let finalUrl = url;
     const isYouTube = this.pageData()?.videoConfig.type === 'youtube';
@@ -100,25 +98,42 @@ export class LoveComponent implements OnInit {
     this.updateVideoUrl(this.pageData()?.videoConfig.src, true);
   }
 
-  // --- GSAP Animations ---
   private playEntranceAnimation() {
     gsap.fromTo('.note-card', 
-      { opacity: 0, y: 100, scale: 0.5 },
-      { duration: 1, opacity: 1, y: 0, scale: 1, stagger: 0.2, ease: 'back.out(1.7)' }
+      { opacity: 0, y: 50, scale: 0.8 },
+      { duration: 0.8, opacity: 1, y: 0, scale: 1, stagger: 0.2, ease: 'back.out(1.4)' }
     );
   }
 
-  moveButton() {
-    const x = Math.random() * (window.innerWidth - 150);
-    const y = Math.random() * (window.innerHeight - 100);
-    gsap.to(this.noBtn.nativeElement, { duration: 0.2, left: x + 'px', top: y + 'px', position: 'fixed' });
+  moveButton(event?: Event) {
+    if (event) {
+      event.preventDefault(); // Button ကို အမှန်တကယ် နှိပ်မသွားစေရန်
+    }
+
+    const btn = this.noBtn.nativeElement;
+    const padding = 30; // Screen ဘောင်နဲ့ ကပ်မနေစေရန်
+    
+    // Screen အရွယ်အစားပေါ်မူတည်ပြီး Random နေရာတွက်ချက်ခြင်း
+    const maxX = window.innerWidth - btn.offsetWidth - padding;
+    const maxY = window.innerHeight - btn.offsetHeight - padding;
+
+    const randomX = Math.max(padding, Math.random() * maxX);
+    const randomY = Math.max(padding, Math.random() * maxY);
+
+    gsap.to(btn, { 
+      duration: 0.3, 
+      left: randomX + 'px', 
+      top: randomY + 'px', 
+      position: 'fixed',
+      zIndex: 999,
+      ease: "power2.out"
+    });
   }
 
   private startGsapHearts() {
     const container = document.querySelector('.heart-container');
     if (!container) return;
 
-    // Create a new heart every 400ms
     setInterval(() => {
       const heart = document.createElement('div');
       heart.innerHTML = '❤️';
@@ -127,25 +142,19 @@ export class LoveComponent implements OnInit {
       heart.style.bottom = '-10%';
       heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
       heart.style.opacity = '0';
-      heart.style.zIndex = '1';
+      heart.style.pointerEvents = 'none';
       
       container.appendChild(heart);
 
-      // GSAP Magic
       gsap.to(heart, {
-        y: -window.innerHeight - 100, // Move up
-        x: (Math.random() - 0.5) * 200, // Random horizontal sway
+        y: -window.innerHeight - 100,
+        x: (Math.random() - 0.5) * 150,
         rotation: Math.random() * 360,
         opacity: 1,
-        duration: Math.random() * 3 + 4,
-        ease: "power1.out",
-        onStart: () => {
-           gsap.set(heart, { opacity: 1 });
-        },
-        onComplete: () => {
-          heart.remove(); // Clean up DOM
-        }
+        duration: Math.random() * 2 + 5,
+        ease: "none",
+        onComplete: () => heart.remove()
       });
-    }, 400);
+    }, 600);
   }
 }
