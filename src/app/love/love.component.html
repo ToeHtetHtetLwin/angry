@@ -1,0 +1,67 @@
+<div class="romantic-page" *ngIf="pageData()">
+  <div class="heart-container"></div>
+
+  <h1 class="title">{{ pageData().title }}</h1>
+
+  <div class="notes">
+    <div
+      *ngFor="let note of pageData().notes"
+      class="note-card"
+      [style.backgroundColor]="note.color"
+    >
+      <p>{{ note.text }}</p>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <p-button
+      [label]="pageData().buttons.yes"
+      severity="danger"
+      [rounded]="true"
+      (onClick)="openDialog()"
+    ></p-button>
+    
+    <button #noBtn (mouseover)="moveButton()" class="no-btn">
+      {{ pageData().buttons.no }}
+    </button>
+  </div>
+
+  <p-dialog
+    [visible]="displayDialog()"
+    (visibleChange)="displayDialog.set($event)"
+    [modal]="true"
+    [draggable]="false"
+    styleClass="romantic-dialog"
+    [style]="{ width: '50vw' }"
+  >
+    <div *ngIf="step() === 1" class="letter">
+      <h2 class="bright-text">{{ pageData().dialog.header }}</h2>
+      <p class="typewriter-text bright-text"></p>
+      <div class="flex justify-center mt-4">
+        <button class="surprise-btn" (click)="showVideo()">
+          {{ pageData().dialog.actionBtn }}
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="step() === 2" class="video-box">
+      <div class="video-container">
+        <iframe
+          *ngIf="pageData().videoConfig.type === 'youtube'"
+          [src]="safeVideoUrl()!"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+        <video 
+          *ngIf="pageData().videoConfig.type === 'mp4'"
+          [src]="pageData().videoConfig.src"
+          controls autoplay class="w-full"
+        ></video>
+      </div>
+      <div class="video-footer-text">
+        <h2 class="bright-text">{{ pageData().dialog.footerTitle }}</h2>
+        <p class="bright-text">{{ pageData().dialog.footerSub }}</p>
+      </div>
+    </div>
+  </p-dialog>
+</div>
