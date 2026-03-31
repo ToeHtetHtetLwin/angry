@@ -38,17 +38,29 @@
     [draggable]="false"
     styleClass="romantic-dialog"
   >
-    <div *ngIf="step() === 1" class="letter">
+    <div *ngIf="step() === 1" class="letter-step">
       <h2 class="bright-text">{{ pageData().dialog.header }}</h2>
       <p class="typewriter-text bright-text"></p>
       <div class="flex justify-center mt-4">
-        <button class="surprise-btn" (click)="showVideo()">
+        <button class="surprise-btn" (click)="showFlowers()">
           {{ pageData().dialog.actionBtn }}
         </button>
       </div>
     </div>
 
-    <div *ngIf="step() === 2" class="video-box">
+    <div *ngIf="step() === 1.5" class="gif-step">
+      <div class="gif-container">
+        <img src="/flower.webp" alt="Flowers for you" />
+      </div>
+      <h3 class="bright-text">ပန်းလေးတွေက မမအတွက်... 🌹</h3>
+      <div class="flex justify-center mt-4">
+        <button class="surprise-btn" (click)="showVideo()">
+          Watch Surprise ❤️
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="step() === 2" class="video-step">
       <div class="video-container">
         <iframe
           *ngIf="pageData().videoConfig.type === 'youtube'"

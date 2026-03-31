@@ -1,18 +1,8 @@
-import { 
-  Component, 
-  OnInit, 
-  ElementRef, 
-  ViewChild, 
-  signal, 
-  computed, 
-  effect, 
-  inject 
-} from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, signal, computed, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import gsap from 'gsap';
@@ -33,10 +23,7 @@ export class LoveComponent implements OnInit {
   private allCustomers = signal<any[]>([]);
   private customerId = signal<string | null>(null);
 
-  pageData = computed(() => 
-    this.allCustomers().find(c => c.id === this.customerId())
-  );
-
+  pageData = computed(() => this.allCustomers().find(c => c.id === this.customerId()));
   safeVideoUrl = signal<SafeResourceUrl | null>(null);
   displayDialog = signal(false);
   step = signal(1);
@@ -53,7 +40,7 @@ export class LoveComponent implements OnInit {
         this.updateVideoUrl(data.videoConfig.src, false);
         setTimeout(() => {
           this.playEntranceAnimation();
-          this.startGsapHearts(); 
+          this.startGsapHearts();
         }, 500);
       } else if (this.allCustomers().length > 0) {
         this.router.navigate(['/not-found']);
@@ -62,20 +49,16 @@ export class LoveComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.customerId.set(params.get('id'));
-    });
-
+    this.route.paramMap.subscribe(params => this.customerId.set(params.get('id')));
     this.http.get<any[]>('/customers.json').subscribe({
       next: (data) => this.allCustomers.set(data),
-      error: (err) => console.error('JSON loading error:', err)
+      error: (err) => console.error('JSON Error:', err)
     });
   }
 
   private updateVideoUrl(url: string, autoplay: boolean) {
     let finalUrl = url;
-    const isYouTube = this.pageData()?.videoConfig.type === 'youtube';
-    if (isYouTube && autoplay) {
+    if (this.pageData()?.videoConfig.type === 'youtube' && autoplay) {
       finalUrl += finalUrl.includes('?') ? '&autoplay=1' : '?autoplay=1';
     }
     this.safeVideoUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(finalUrl));
@@ -93,47 +76,33 @@ export class LoveComponent implements OnInit {
     }, 600);
   }
 
+  showFlowers() {
+    this.step.set(1.5);
+  }
+
   showVideo() {
     this.step.set(2);
     this.updateVideoUrl(this.pageData()?.videoConfig.src, true);
   }
 
-  private playEntranceAnimation() {
-    gsap.fromTo('.note-card', 
-      { opacity: 0, y: 50, scale: 0.8 },
-      { duration: 0.8, opacity: 1, y: 0, scale: 1, stagger: 0.2, ease: 'back.out(1.4)' }
-    );
-  }
-
   moveButton(event?: Event) {
-    if (event) {
-      event.preventDefault(); // Button ကို အမှန်တကယ် နှိပ်မသွားစေရန်
-    }
-
+    if (event) event.preventDefault();
     const btn = this.noBtn.nativeElement;
-    const padding = 30; // Screen ဘောင်နဲ့ ကပ်မနေစေရန်
-    
-    // Screen အရွယ်အစားပေါ်မူတည်ပြီး Random နေရာတွက်ချက်ခြင်း
+    const padding = 30;
     const maxX = window.innerWidth - btn.offsetWidth - padding;
     const maxY = window.innerHeight - btn.offsetHeight - padding;
+    const x = Math.max(padding, Math.random() * maxX);
+    const y = Math.max(padding, Math.random() * maxY);
+    gsap.to(btn, { duration: 0.3, left: x, top: y, position: 'fixed', zIndex: 999 });
+  }
 
-    const randomX = Math.max(padding, Math.random() * maxX);
-    const randomY = Math.max(padding, Math.random() * maxY);
-
-    gsap.to(btn, { 
-      duration: 0.3, 
-      left: randomX + 'px', 
-      top: randomY + 'px', 
-      position: 'fixed',
-      zIndex: 999,
-      ease: "power2.out"
-    });
+  private playEntranceAnimation() {
+    gsap.fromTo('.note-card', { opacity: 0, y: 50 }, { duration: 0.8, opacity: 1, y: 0, stagger: 0.2 });
   }
 
   private startGsapHearts() {
     const container = document.querySelector('.heart-container');
     if (!container) return;
-
     setInterval(() => {
       const heart = document.createElement('div');
       heart.innerHTML = '❤️';
@@ -141,20 +110,8 @@ export class LoveComponent implements OnInit {
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.bottom = '-10%';
       heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
-      heart.style.opacity = '0';
-      heart.style.pointerEvents = 'none';
-      
       container.appendChild(heart);
-
-      gsap.to(heart, {
-        y: -window.innerHeight - 100,
-        x: (Math.random() - 0.5) * 150,
-        rotation: Math.random() * 360,
-        opacity: 1,
-        duration: Math.random() * 2 + 5,
-        ease: "none",
-        onComplete: () => heart.remove()
-      });
+      gsap.to(heart, { y: -window.innerHeight - 100, x: (Math.random() - 0.5) * 150, opacity: 1, duration: 5, onComplete: () => heart.remove() });
     }, 600);
   }
 }
