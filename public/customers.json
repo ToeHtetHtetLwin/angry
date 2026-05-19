@@ -28,12 +28,12 @@
       "footerSub": "မမကမောင်ရဲ့ တစ်ဉီးတည်းသောချစ်ရသူပါ💌"
     },
     "videoConfig": {
-      "type": "youtube",
-      "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
+      "type": "mp4",
+      "src": "lonely.mp4"
     }
   },
   {
-    "id": "cus02",
+    "id": "902",
     "title": "Please Forgive Me 🥺",
     "notes": [
       {
@@ -41,7 +41,7 @@
         "color": "#fff9c4"
       },
       {
-        "text": "နင်စိတ်ဆိုးနေရင် ငါ့မှာ နေမထိထိုင်မသာဖြစ်လို့ပါ",
+        "text": "နင်စိတ်ဆိုးနေရင် ငါ့မှာ နေမထိထိုင်မသာဖြစ်လို့ပါ❤️",
         "color": "#ffd1dc"
       },
       {
@@ -62,7 +62,7 @@
     },
     "videoConfig": {
       "type": "mp4",
-      "src": "assets/videos/our-memory.mp4"
+      "src": "lonely.mp4"
     }
   },
   {
@@ -94,8 +94,8 @@
       "footerSub": "မကမောင်ရဲ့ တစ်ဉီးတည်းသောချစ်ရသူပါ💌"
     },
     "videoConfig": {
-      "type": "youtube",
-      "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
+      "type": "mp4",
+      "src": "lonely.mp4"
     }
   },
   {
@@ -127,8 +127,8 @@
       "footerSub": "မင်း​လေးက​ကို.ရဲ့ တစ်ဉီးတည်းသောချစ်ရသူပါ💌"
     },
     "videoConfig": {
-      "type": "youtube",
-      "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
+      "type": "mp4",
+      "src": "lonely.mp4"
     }
   }
 ]
