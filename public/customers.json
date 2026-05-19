@@ -97,5 +97,38 @@
       "type": "youtube",
       "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
     }
+  },
+  {
+    "id": "cus04",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "​ကိုတစ်ကယ်​တောင်းပန်ပါတယ်​နော်❤️...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "မင်း​လေးစိတ်ဆိုး​နေရင် ​မ​နေတတ်လို့ပါ❤️...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "မင်း​လေးက​ကို.အတွက်​တော့အရာအားလုံးပါပဲ ​တောင်းပန်ပါတယ်ခွင့်လွှတ်​ပေးပါ​နော် I am so sorry  🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes I Forgive You ❤️",
+      "no": "No 😠"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "မင်းကိုစိတ်ဆိုး​အောင်လုက်မိလို့ကိုတစ်တကယ်အကြီးကျယ်ခံစား​နေရပြီ။ ​ရွှေမင်းသမီး အမျက်​တော်ရှလို့ ဒီ အမတ်​တော်မှာရူးရပါ​တော့မယ်။ စိတ်ဆိုး​ပြေ​ပေးပါ​တော့။သိပ်ချစ်တယ်ကွယ်။❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "မင်း​လေးက​ကို.ရဲ့ တစ်ဉီးတည်းသောချစ်ရသူပါ💌"
+    },
+    "videoConfig": {
+      "type": "youtube",
+      "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
+    }
   }
 ]
