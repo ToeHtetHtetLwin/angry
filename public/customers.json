@@ -33,39 +33,6 @@
     }
   },
   {
-    "id": "902",
-    "title": "Please Forgive Me 🥺",
-    "notes": [
-      {
-        "text": "ငါ တကယ်တောင်းပန်ပါတယ်...",
-        "color": "#fff9c4"
-      },
-      {
-        "text": "နင်စိတ်ဆိုးနေရင် ငါ့မှာ နေမထိထိုင်မသာဖြစ်လို့ပါ❤️",
-        "color": "#ffd1dc"
-      },
-      {
-        "text": "ပြန်ချစ်ကြရအောင်နော် ❤️",
-        "color": "#d1e9ff"
-      }
-    ],
-    "buttons": {
-      "yes": "Yes I Forgive You ❤️",
-      "no": "No 😠"
-    },
-    "dialog": {
-      "header": "💌 Message",
-      "typewriterText": "နင့်ကို စိတ်ဆိုးအောင် လုပ်မိတဲ့အတွက် ငါ့စိတ်ထဲမှာလည်း အရမ်းနာတယ်။ နင်မရှိဘဲ ငါ့ကမ္ဘာကြီးက အရောင်မရှိသလိုပဲ။ ငါ့ကို ခွင့်လွှတ်ပေးပါနော်။ နင့်ကို အရမ်းချစ်တယ် ❤️",
-      "actionBtn": "Watch Surprise ❤️",
-      "footerTitle": "I Love You ❤️",
-      "footerSub": "နင်က ငါ့ရဲ့ တစ်ဦးတည်းသော အချစ်ဆုံးပါ"
-    },
-    "videoConfig": {
-      "type": "mp4",
-      "src": "lonely.mp4"
-    }
-  },
-  {
     "id": "cus03",
     "title": "Please Forgive Me 🥺",
     "notes": [
