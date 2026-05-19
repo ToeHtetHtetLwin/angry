@@ -36,12 +36,18 @@
     "id": "cus02",
     "title": "Please Forgive Me 🥺",
     "notes": [
-      { "text": "ငါ တကယ်တောင်းပန်ပါတယ်...", "color": "#fff9c4" },
+      {
+        "text": "ငါ တကယ်တောင်းပန်ပါတယ်...",
+        "color": "#fff9c4"
+      },
       {
         "text": "နင်စိတ်ဆိုးနေရင် ငါ့မှာ နေမထိထိုင်မသာဖြစ်လို့ပါ",
         "color": "#ffd1dc"
       },
-      { "text": "ပြန်ချစ်ကြရအောင်နော် ❤️", "color": "#d1e9ff" }
+      {
+        "text": "ပြန်ချစ်ကြရအောင်နော် ❤️",
+        "color": "#d1e9ff"
+      }
     ],
     "buttons": {
       "yes": "Yes I Forgive You ❤️",
@@ -55,8 +61,41 @@
       "footerSub": "နင်က ငါ့ရဲ့ တစ်ဦးတည်းသော အချစ်ဆုံးပါ"
     },
     "videoConfig": {
-    "type": "mp4",
-    "src": "assets/videos/our-memory.mp4"
-  }
+      "type": "mp4",
+      "src": "assets/videos/our-memory.mp4"
+    }
+  },
+  {
+    "id": "cus03",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "​မောင်တစ်ကယ်​တောင်းပန်ပါတယ်​နော်❤️...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "မစိတ်ဆိုး​နေရင် ​မောင်မ​နေတတ်လို့ပါ❤️...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "မက​မောင့်အတွက်​တော့အရာအားလုံးပါပဲ ​တောင်းပန်ပါတယ် မရယ်ခွင့်လွှတ်​ပေးပါ​နော် I am so sorry Ma 🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes I Forgive You ❤️",
+      "no": "No 😠"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "မ​ရေ ​မောင်တစ်တကယ်​တောင်းပန်ပါတယ်။ မကိုစိတ်ဆိုး​စေတာ​မောင့်အတွက်​ကောင်းကင်က​​ပေးတဲ့ပြစ်ဒဏ်လိုပဲခံစား​နေရပါတယ်။ ​​လောကကြီးမှာသစ်ရွက်​တွေ သစ်ပင်​တွေမရှိရင်မစိမ်းလန်းသလို့ ​မောင့်ဘဝမှာလည်း မ မရှိရင် မစိမ်းလန်းနိုင်​တော့လို့ပါ​နော်။ သိပ်ချစ်ပါတယ်မရယ်🥺❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "မကမောင်ရဲ့ တစ်ဉီးတည်းသောချစ်ရသူပါ💌"
+    },
+    "videoConfig": {
+      "type": "youtube",
+      "src": "https://www.youtube.com/embed/cKbt1UGpA4k"
+    }
   }
 ]
