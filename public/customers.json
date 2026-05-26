@@ -130,5 +130,38 @@
       "type": "mp4",
       "src": "bunny.mp4"
     }
+  },
+  {
+    "id": "cus06",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "​ငါတစ်ကယ်​တောင်းပန်ပါတယ်❤️...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "နင်စိတ်ဆိုး​နေရင်ငါ့မှာ​နေမထိထိုင်မသာဖြစ်လို့ပါ❤️...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "ဘာမှမတွေးတော့ဘဲနဲ့ ပြန်အဆင်ပြေကြရအောင်နော်❤️  🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes I Forgive You ❤️",
+      "no": "No 😠"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "နင့်ကိုစိတ်ဆိုးအောင်လုပ်မိတဲ့အတွက် ငါ့စိတ်ထဲမှာလည်း အရမ်းနာကျင်ရပါတယ်။ နင်သာမရှိတော့ရင် ငါဘယ်အရာမှအဆင်ပြေနိုင်မှာမဟုတ်ဘူး။ငါ့ကိုခွင့်လွှတ်ပေးပါနော်။ နင့်ကို အရမ်းချစ်တယ်❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "Forgive me now please💌"
+    },
+    "videoConfig": {
+      "type": "mp4",
+      "src": "minkhant.mp4"
+    }
   }
 ]
