@@ -196,5 +196,38 @@
       "type": "mp4",
       "src": "vd.mp4"
     }
+  },
+  {
+    "id": "cus08",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "မောင့်အသည်းလေးရေ စိတ်မကောက်ပါနဲ့တော့ 💔...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "မောင့် ရင်တွေတောင် နာနေပြီ 💔...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "အသည်းလက်ကလေးနဲ့ စမ်းကြည့်ပါဦး 🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes❤️",
+      "no": "No 💔"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "မောင့်အသည်းလေးမကြိုက်တာ မောင်ထပ်မလုပ်တော့ဘူးနော် 🥺 အများကြီးပိုအလိုလိုက်ပြီး အများကြီးပိုချစ်ပေးပါ့မယ်နော် ❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "Forgive me now please💌"
+    },
+    "videoConfig": {
+      "type": "mp4",
+      "src": "sate.mp4"
+    }
   }
 ]
