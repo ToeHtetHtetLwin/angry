@@ -163,5 +163,71 @@
       "type": "mp4",
       "src": "minkhant.mp4"
     }
+  },
+  {
+    "id": "cus07",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "​ငါတစ်ကယ်​တောင်းပန်ပါတယ်❤️...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "အင်တာနက်လိုင်းမ​ကောင်းလို့ replyနောက်ကျသွားတာ❤️...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "တစ်ခြားလူနဲ့ကြူ​နေတာလုံးဝမဟုတ်ရပါဘူးဗျာ❤️  🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes I Forgive You ❤️",
+      "no": "No 😠"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "မင်းကိုစိတ်ဆိုးအောင်လုပ်မိတဲ့အတွက် ကိုယ်စိတ်ထဲမှာလည်း အရမ်းနာကျင်ရပါတယ်။ အချိန်မ​ပေးမိခဲ့တာ​တွေအတွက်လည်းအခုကစပြီးအစားပြန်​ပေးပါမယ်လို့။စိတ်မ​ကောက်ပါနဲ့​တော့​နော်။❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "Forgive me now please💌"
+    },
+    "videoConfig": {
+      "type": "mp4",
+      "src": "am.mp4"
+    }
+  },
+  {
+    "id": "cus08",
+    "title": "Please Forgive Me 🥺",
+    "notes": [
+      {
+        "text": "​မောင်တစ်ကယ်​တောင်းပန်ပါတယ်❤️...",
+        "color": "#fff9c4"
+      },
+      {
+        "text": "နှင်းနှင်းစိတ်ဆိုး​နေရင်မောင်​နေမထိထိုင်မသာဖြစ်လို့ပါ❤️...",
+        "color": "#ffd1dc"
+      },
+      {
+        "text": "ဘာမှမတွေးတော့ဘဲနဲ့ ပြန်အဆင်ပြေကြရအောင်နော်❤️  🥺...",
+        "color": "#d1e9ff"
+      }
+    ],
+    "buttons": {
+      "yes": "Yes I Forgive You ❤️",
+      "no": "No 😠"
+    },
+    "dialog": {
+      "header": "💌 Message",
+      "typewriterText": "နှင်းနှင်းကိုစိတ်ဆိုးအောင်လုပ်မိတဲ့အတွက် ​မောင့်စိတ်ထဲမှာလည်း အရမ်းနာကျင်ရပါတယ်။ နှင်းနှင်းသာမရှိတော့ရင် မောင်ဘယ်အရာမှအဆင်ပြေနိုင်မှာမဟုတ်ဘူး။​မောင့်ကိုခွင့်လွှတ်ပေးပါနော်။ အရမ်းချစ်တယ်❤️",
+      "actionBtn": "Watch Surprise ❤️",
+      "footerTitle": "I Love You ❤️",
+      "footerSub": "Forgive me now please💌"
+    },
+    "videoConfig": {
+      "type": "mp4",
+      "src": "minkhant.mp4"
+    }
   }
 ]
