@@ -1,7 +1,7 @@
-<div class="romantic-page" *ngIf="pageData()">
+<div class="romantic-page notranslate" *ngIf="pageData()" translate="no">
   <div class="heart-container"></div>
 
-  <h1 class="title">{{ pageData().title }}</h1>
+  <h1 class="title" translate="no">{{ pageData().title }}</h1>
 
   <div class="notes">
     <div
@@ -9,7 +9,7 @@
       class="note-card"
       [style.backgroundColor]="note.color"
     >
-      <p>{{ note.text }}</p>
+      <p translate="no">{{ note.text }}</p>
     </div>
   </div>
 
@@ -26,6 +26,7 @@
       (mouseover)="moveButton()"
       (touchstart)="moveButton($event)"
       class="no-btn"
+      translate="no"
     >
       {{ pageData().buttons.no }}
     </button>
@@ -36,13 +37,13 @@
     (visibleChange)="displayDialog.set($event)"
     [modal]="true"
     [draggable]="false"
-    styleClass="romantic-dialog"
+    styleClass="romantic-dialog notranslate"
   >
     <div *ngIf="step() === 1" class="letter-step">
-      <h2 class="bright-text">{{ pageData().dialog.header }}</h2>
-      <p class="typewriter-text bright-text"></p>
+      <h2 class="bright-text" translate="no">{{ pageData().dialog.header }}</h2>
+      <p class="typewriter-text bright-text" translate="no"></p>
       <div class="flex justify-center mt-4">
-        <button class="surprise-btn" (click)="showFlowers()">
+        <button class="surprise-btn" (click)="showFlowers()" translate="no">
           {{ pageData().dialog.actionBtn }}
         </button>
       </div>
@@ -52,9 +53,9 @@
       <div class="gif-container">
         <img src="/flower.webp" alt="Flowers for you" />
       </div>
-      <h3 class="bright-text">ပန်း​ပေးခြင်းဟာအရှူံး​ပေးခြင်းပါတဲ့... 🌹</h3>
+      <h3 class="bright-text" translate="no">ပန်း​ပေးခြင်းဟာအရှူံး​ပေးခြင်းပါတဲ့... 🌹</h3>
       <div class="flex justify-center mt-4">
-        <button class="surprise-btn" (click)="showVideo()">
+        <button class="surprise-btn" (click)="showVideo()" translate="no">
           Watch Surprise ❤️
         </button>
       </div>
@@ -77,8 +78,8 @@
         ></video>
       </div>
       <div class="video-footer-text">
-        <h2 class="bright-text">{{ pageData().dialog.footerTitle }}</h2>
-        <p class="bright-text">{{ pageData().dialog.footerSub }}</p>
+        <h2 class="bright-text" translate="no">{{ pageData().dialog.footerTitle }}</h2>
+        <p class="bright-text" translate="no">{{ pageData().dialog.footerSub }}</p>
       </div>
     </div>
   </p-dialog>
